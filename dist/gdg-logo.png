@@ -1,0 +1,29 @@
+<div className="gdg-logo">
+  <svg
+    width="52"
+    height="44"
+    viewBox="0 0 52 44"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-label="Google Developer Groups"
+    role="img"
+  >
+    <path
+      d="M7 8 L23 17 L17 24 L3 16 Q0 13 3 10 Z"
+      fill="#EA4335"
+    />
+    <path
+      d="M23 17 L43 6 Q48 4 50 9 Q52 13 47 16 L29 27 L17 24 Z"
+      fill="#34A853"
+    />
+    <path
+      d="M3 25 Q0 28 4 32 L18 41 Q22 43 26 38 L29 33 L17 24 Z"
+      fill="#4285F4"
+    />
+    <path
+      d="M29 27 L47 37 Q52 40 49 44 L45 47 L25 36 L17 24 Z"
+      fill="#FBBC04"
+      transform="translate(0 -5)"
+    />
+  </svg>
+</div>
