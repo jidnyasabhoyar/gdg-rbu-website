@@ -20,8 +20,18 @@ const faqs = [
     />
   );
 }
-function App(){const [open,setOpen]=useState(0); useEffect(()=>{const nodes=[...document.querySelectorAll('.reveal')]; if(!('IntersectionObserver' in window)){nodes.forEach(n=>n.classList.add('is-visible'));return;} const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:0.12,rootMargin:'0px 0px -35px 0px'});nodes.forEach(n=>observer.observe(n));return ()=>observer.disconnect();},[]);return <div className="page">
-<header className="nav"><a href="#top" className="brand"><Logo/></a><nav>{[['Home','#top','blue'],['Team','#team','red'],['Events','#events','yellow'],['Gallery','#team','green'],['Portfolio','#team','purple'],['More','#faqs','blue']].map(([t,h,c])=><a className={'nav-btn '+c} href={h} key={t}>{t}</a>)}</nav><div className="profile"><a href="#join-us" className="nav-join-btn">
+//function App(){const [open,setOpen]=useState(0);
+ function App(){
+const [open,setOpen]=useState(0);
+const [dark,setDark]=useState(false);
+ useEffect(()=>{const nodes=[...document.querySelectorAll('.reveal')]; if(!('IntersectionObserver' in window)){nodes.forEach(n=>n.classList.add('is-visible'));return;} const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:0.12,rootMargin:'0px 0px -35px 0px'});nodes.forEach(n=>observer.observe(n));return ()=>observer.disconnect();},[]);return <div className={dark ? "page dark" : "page"}>
+<header className="nav"><a href="#top" className="brand"><Logo/></a><nav>{[['Home','#top','blue'],['Team','#team','red'],['Events','#events','yellow'],['Gallery','#team','green'],['Portfolio','#team','purple'],['More','#faqs','blue']].map(([t,h,c])=><a className={'nav-btn '+c} href={h} key={t}>{t}</a>)}</nav><button
+  className="theme-toggle"
+  onClick={() => setDark(!dark)}
+  aria-label="Toggle light and dark mode"
+>
+  {dark ? "☀ Light" : "☾ Dark"}
+</button><div className="profile"><a href="#join-us" className="nav-join-btn">
   Join Us <span></span>
 </a><ChevronDown size={12}/></div></header>
 <main id="top">
