@@ -14,7 +14,7 @@ const faqs = [
  function Logo() {
   return (
     <img
-      src="/gdg-logo.svg"
+      src="/gdg-logo.png"
       alt="Google Developer Groups"
       className="gdg-logo-img"
     />
@@ -40,12 +40,15 @@ const [dark,setDark]=useState(false);
 <section id="team" className="team wrap reveal"><div className="team-copy"><h2>Meet the<br/>Google<br/>Developer<br/>Group Team</h2><p>Google Developer Groups (GDG) are open and volunteer-run communities for developers interested in Google technologies. Our team focuses on learning, networking, and collaboration through events and hands-on sessions.</p><div className="feature"><CheckCircle2 size={14}/><div><b>Passionate Community Leaders</b><p>Our organizers build an inclusive environment where developers can connect, share knowledge, and grow together.</p></div></div><div className="feature"><CheckCircle2 size={14}/><div><b>Empowering Developers</b><p>We host meetups and codelabs to help developers stay current with modern tools and best practices.</p></div></div></div><img src="/team-photo.png" alt="GDG RBU student team"/></section>
 <section id="faqs" className="faqs reveal"><h2>FAQs</h2><div className="faq-list">{faqs.map(([q,a],i)=><div className="faq" key={q}><button onClick={()=>setOpen(open===i?-1:i)} aria-expanded={open===i}><span>{q}</span><ChevronDown size={17} className={open===i?'rotated':''}/></button>{open===i&&<div className="answer">{a}</div>}</div>)}</div></section>
 </main>
-<footer id="footer" className="footer-shell reveal"><div className="footer-card"><div className="footer-head"><svg viewBox="0 0 48 40" width="48" height="40" aria-label="GDG logo">
-  <path d="M5 5 L20 13 L14 20 L3 14 Q0 11 5 5Z" fill="#EA4335" />
-  <path d="M20 13 L38 3 Q43 1 46 6 Q48 10 43 13 L26 24 L14 20Z" fill="#34A853" />
-  <path d="M3 23 Q0 26 4 30 L15 38 Q19 40 22 35 L26 29 L14 20Z" fill="#4285F4" />
-  <path d="M26 24 L43 32 Q48 35 44 39 Q42 41 38 38 L22 29Z" fill="#FBBC04" />
-</svg><h2>Google Developer Groups</h2><p>On Campus · Ramdeobaba University</p></div><div className="dashes">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div><div className="footer-info"><div className="footer-left"><div className="info-box address"><MapPin size={20}/><b>Ramdeobaba University<br/>Ramdeo Tekdi, Gittikhadan, Katol Road, Nagpur-440013</b></div><div className="info-box email"><Mail size={20}/><b>gdsc@rknec.edu</b></div></div><div className="social-box"><b>Follow Us:</b><div><a className="social insta" href="https://instagram.com" aria-label="Instagram"><Instagram/></a><a className="social linked" href="https://linkedin.com" aria-label="LinkedIn"><Linkedin/></a><a className="social x" href="https://x.com" aria-label="X">X</a></div></div></div></div><div className="shapes"><span className="s1"/><span className="s2"/><span className="s3"/><span className="s4"/><span className="s5"/><span className="s6"/><span className="s7"/><span className="s8"/><span className="s9"/><span className="s10"/></div></footer>
+<footer id="footer" className="footer-shell reveal"><div className="footer-card"><div className="footer-head"><img
+  src="/gdg-logo.png"
+  alt="Google Developer Groups logo"
+  style={{
+    width: "64px",
+    height: "40px",
+    objectFit: "contain"
+  }}
+/><h2>Google Developer Groups</h2><p>On Campus · Ramdeobaba University</p></div><div className="dashes">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div><div className="footer-info"><div className="footer-left"><div className="info-box address"><MapPin size={20}/><b>Ramdeobaba University<br/>Ramdeo Tekdi, Gittikhadan, Katol Road, Nagpur-440013</b></div><div className="info-box email"><Mail size={20}/><b>gdsc@rknec.edu</b></div></div><div className="social-box"><b>Follow Us:</b><div><a className="social insta" href="https://instagram.com" aria-label="Instagram"><Instagram/></a><a className="social linked" href="https://linkedin.com" aria-label="LinkedIn"><Linkedin/></a><a className="social x" href="https://x.com" aria-label="X">X</a></div></div></div></div><div className="shapes"><span className="s1"/><span className="s2"/><span className="s3"/><span className="s4"/><span className="s5"/><span className="s6"/><span className="s7"/><span className="s8"/><span className="s9"/><span className="s10"/></div></footer>
 </div>}
 
 createRoot(document.getElementById('root')).render(<App/>);

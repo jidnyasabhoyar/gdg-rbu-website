@@ -360,3 +360,174 @@ body {
   background: #f5f5f5;
   color: #111;
 }
+
+/* GDG FINAL HEADER POLISH */
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.gdg-logo-img {
+  display: block;
+  width: 64px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 90px;
+  padding: 16px 5%;
+}
+
+.nav nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 11px 17px;
+  border: 2px solid #111;
+  border-radius: 9px;
+  box-shadow: 3px 3px 0 #111;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #111;
+}
+
+.nav-join-btn {
+  padding: 15px 27px;
+  border-radius: 14px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    gap: 16px;
+    padding: 14px 4%;
+  }
+
+  .nav nav {
+    gap: 10px;
+  }
+
+  .nav-btn {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    justify-content: space-between;
+  }
+
+  .gdg-logo-img {
+    width: 52px;
+    height: 42px;
+  }
+
+  .nav nav {
+    gap: 9px;
+  }
+
+  .nav-join-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+
+/* FIX: GDG ORIENTATION EVENT CARD */
+
+.event-feature {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 25px;
+  padding: 24px;
+}
+
+.event-description {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 85px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  box-sizing: border-box;
+}
+
+.event-description h3 {
+  margin: 0 0 14px;
+  font-size: clamp(18px, 2vw, 22px);
+}
+
+.event-description p {
+  margin: 0;
+  max-width: 100%;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.round-arrow {
+  position: absolute;
+  left: 24px;
+  bottom: 16px;
+  width: 48px;
+  height: 48px;
+  z-index: 2;
+}
+
+/* Keep both event cards inside their grid */
+.event-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 0.9fr);
+  gap: 22px;
+  width: 100%;
+  min-width: 0;
+}
+
+.event-feature,
+.event-new {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .event-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .event-feature {
+    min-height: 400px;
+  }
+
+  .event-description {
+    left: 18px;
+    right: 18px;
+    bottom: 78px;
+  }
+
+  .event-description p {
+    font-size: 13px;
+  }
+}
